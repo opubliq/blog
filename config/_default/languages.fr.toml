@@ -1,0 +1,17 @@
+[params]
+  displayName = "Français"
+  isoCode = "fr-CA"
+  rtl = false
+  dateFormat = "2 January 2006"
+
+title = "Opubliq"
+description = "Analyses originales de données publiques québécoises"
+
+[author]
+  name = "Opubliq"
+  headline = "Analyse de données d'opinion publique"
+  links = [
+    { linkedin = "https://www.linkedin.com/company/opubliq" },
+    { github = "https://github.com/opubliq" },
+    { link = "https://opubliq.com" }
+  ]

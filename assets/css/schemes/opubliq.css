@@ -1,0 +1,33 @@
+/* Opubliq color scheme for Congo */
+:root {
+  --color-neutral: 215, 220, 224;
+  --color-neutral-50: 248, 250, 252;
+  --color-neutral-100: 241, 245, 249;
+  --color-neutral-200: 226, 232, 240;
+  --color-neutral-300: 203, 213, 225;
+  --color-neutral-400: 148, 163, 184;
+  --color-neutral-500: 100, 116, 139;
+  --color-neutral-600: 71, 85, 105;
+  --color-neutral-700: 51, 65, 85;
+  --color-neutral-800: 30, 41, 59;
+  --color-neutral-900: 15, 23, 42;
+
+  /* Opubliq teal/cyan palette */
+  --color-primary-50: 236, 254, 255;
+  --color-primary-100: 207, 250, 254;
+  --color-primary-200: 165, 243, 252;
+  --color-primary-300: 86, 209, 215;   /* #56d1d7 accent */
+  --color-primary-400: 13, 132, 145;   /* #0d8491 secondary */
+  --color-primary-500: 6, 105, 117;
+  --color-primary-600: 1, 35, 38;      /* #012326 primary dark */
+  --color-primary-700: 1, 30, 33;
+  --color-primary-800: 1, 25, 28;
+  --color-primary-900: 1, 20, 22;
+
+  /* Coral for secondary actions */
+  --color-secondary-200: 254, 205, 200;
+  --color-secondary-300: 252, 165, 155;
+  --color-secondary-400: 240, 105, 90;  /* #f0695a hover */
+  --color-secondary-500: 220, 80, 65;
+  --color-secondary-600: 180, 60, 50;
+}
