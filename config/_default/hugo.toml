@@ -1,4 +1,4 @@
-baseURL = "https://blog.opubliq.com/"
+baseURL = "https://blog-opubliq.netlify.app/"
 defaultContentLanguage = "fr"
 theme = "congo"
 
