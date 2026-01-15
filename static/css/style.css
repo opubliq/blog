@@ -1,11 +1,13 @@
 :root {
-  --primary: #1a365d;
-  --secondary: #2b6cb0;
-  --accent: #3182ce;
-  --text: #1a202c;
+  /* Couleurs Opubliq */
+  --primary: #012326;
+  --secondary: #0d8491;
+  --accent: #56d1d7;
+  --hover: #f0695a;
+  --text: #012326;
   --text-light: #4a5568;
   --bg: #ffffff;
-  --bg-alt: #f7fafc;
+  --bg-alt: #f8f9fa;
   --border: #e2e8f0;
 }
 
@@ -31,35 +33,58 @@ body {
 /* Header */
 header {
   background: var(--primary);
-  padding: 1rem 0;
+  padding: 0;
   position: sticky;
   top: 0;
   z-index: 100;
+  height: 70px;
 }
 
 header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 100%;
+  max-width: 1200px;
 }
 
 .logo {
-  color: #fff;
-  font-size: 1.5rem;
-  font-weight: 700;
+  display: flex;
+  align-items: center;
   text-decoration: none;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 nav a {
   color: rgba(255,255,255,0.9);
   text-decoration: none;
-  margin-left: 2rem;
+  padding: 0 1.5rem;
   font-size: 0.95rem;
-  transition: color 0.2s;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.2s, color 0.2s;
 }
 
 nav a:hover {
+  background-color: var(--hover);
   color: #fff;
+}
+
+nav a.active {
+  background-color: var(--accent);
+  color: var(--primary);
+  font-weight: 600;
 }
 
 /* Main */
@@ -68,14 +93,39 @@ main {
   padding: 3rem 0;
 }
 
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 2rem 0 3rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  color: var(--primary);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  color: var(--text-light);
+  font-size: 1.1rem;
+}
+
 /* Articles */
+.articles h2 {
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
 .article-list {
   list-style: none;
 }
 
 .article-item {
   border-bottom: 1px solid var(--border);
-  padding: 2rem 0;
+  padding: 1.5rem 0;
 }
 
 .article-item:last-child {
@@ -84,21 +134,23 @@ main {
 
 .article-item h2 {
   margin-bottom: 0.5rem;
+  font-size: 1.25rem;
 }
 
 .article-item h2 a {
   color: var(--primary);
   text-decoration: none;
+  transition: color 0.2s;
 }
 
 .article-item h2 a:hover {
-  color: var(--secondary);
+  color: var(--hover);
 }
 
 .article-meta {
   color: var(--text-light);
   font-size: 0.9rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 
 .article-excerpt {
@@ -107,7 +159,7 @@ main {
 
 /* Single article */
 article h1 {
-  font-size: 2.25rem;
+  font-size: 2rem;
   margin-bottom: 0.5rem;
   color: var(--primary);
 }
@@ -138,8 +190,18 @@ article li {
   margin-bottom: 0.5rem;
 }
 
+article a {
+  color: var(--secondary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+article a:hover {
+  color: var(--hover);
+}
+
 article blockquote {
-  border-left: 4px solid var(--secondary);
+  border-left: 4px solid var(--accent);
   padding-left: 1rem;
   margin: 1.5rem 0;
   color: var(--text-light);
@@ -173,46 +235,69 @@ article th {
 /* Tags */
 .tags {
   margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
 }
 
 .tag {
   display: inline-block;
-  background: var(--bg-alt);
-  color: var(--text-light);
+  background: var(--accent);
+  color: var(--primary);
   padding: 0.25rem 0.75rem;
   border-radius: 999px;
   font-size: 0.85rem;
+  font-weight: 500;
   margin-right: 0.5rem;
-  text-decoration: none;
+  margin-bottom: 0.5rem;
 }
 
 /* Footer */
 footer {
-  background: var(--bg-alt);
-  padding: 2rem 0;
+  background: var(--primary);
+  padding: 1.5rem 0;
   text-align: center;
-  color: var(--text-light);
+  color: rgba(255,255,255,0.8);
   font-size: 0.9rem;
-  border-top: 1px solid var(--border);
 }
 
 footer a {
-  color: var(--secondary);
+  color: var(--accent);
   text-decoration: none;
 }
 
+footer a:hover {
+  color: var(--hover);
+}
+
 /* Responsive */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  header {
+    height: auto;
+    padding: 1rem 0;
+  }
+
   header .container {
     flex-direction: column;
     gap: 1rem;
+    height: auto;
+  }
+
+  nav {
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   nav a {
-    margin: 0 1rem;
+    height: auto;
+    padding: 0.5rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
   }
 
   article h1 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 }
