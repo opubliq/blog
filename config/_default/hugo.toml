@@ -1,6 +1,5 @@
 baseURL = "https://blog.opubliq.com/"
 defaultContentLanguage = "fr"
-theme = "congo"
 
 enableRobotsTXT = true
 summaryLength = 0
