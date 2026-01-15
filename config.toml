@@ -1,9 +1,8 @@
 baseURL = "https://blog.opubliq.com/"
 languageCode = "fr-ca"
 title = "Opubliq"
-theme = ""
 
-# Désactiver le thème externe, on utilise layouts/ directement
+# On utilise layouts/ directement, pas de thème externe
 disableKinds = ["taxonomy", "term"]
 
 [params]
