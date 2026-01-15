@@ -1,9 +1,9 @@
 [[main]]
   name = "Articles"
-  pageRef = "articles"
+  url = "/articles/"
   weight = 10
 
 [[main]]
   name = "À propos"
-  pageRef = "a-propos"
+  url = "/a-propos/"
   weight = 20
