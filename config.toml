@@ -1,0 +1,39 @@
+baseURL = "https://blog.opubliq.com/"
+languageCode = "fr-ca"
+title = "Opubliq"
+theme = ""
+
+# Désactiver le thème externe, on utilise layouts/ directement
+disableKinds = ["taxonomy", "term"]
+
+[params]
+  description = "Analyses originales de données publiques québécoises"
+  author = "Opubliq"
+  # Couleurs à personnaliser
+  primaryColor = "#1a365d"
+  secondaryColor = "#2b6cb0"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "monokai"
+
+[menu]
+  [[menu.main]]
+    name = "Accueil"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Articles"
+    url = "/articles/"
+    weight = 2
+  [[menu.main]]
+    name = "À propos"
+    url = "/a-propos/"
+    weight = 3
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]

@@ -1,0 +1,19 @@
+{{ define "main" }}
+<article>
+  <h1>{{ .Title }}</h1>
+  <p class="meta">
+    {{ .Date.Format "2 janvier 2006" }}
+    {{ with .Params.author }} &bull; {{ . }}{{ end }}
+  </p>
+
+  {{ .Content }}
+
+  {{ with .Params.tags }}
+  <div class="tags">
+    {{ range . }}
+    <span class="tag">{{ . }}</span>
+    {{ end }}
+  </div>
+  {{ end }}
+</article>
+{{ end }}
